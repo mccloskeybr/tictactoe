@@ -35,7 +35,7 @@ class AI:
                 max = i
 
         print("")
-        
+
         # Prints probability
         # print(prob)
 

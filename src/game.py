@@ -39,51 +39,6 @@ class TicTacToe:
 
         return False
 
-    # Checks for a win
-    # If X has won, return 1
-    # If O has won, return -1
-    # If tie, return 0
-    # If no one has won, return None
-    def checkForWin(self, board):
-
-        # Horizontal wins
-
-        if board[0][0] is board[0][1] and board[0][0] is board[0][2] and board[0][0] is not 0:
-            return board[0][0]
-        if board[1][0] is board[1][1] and board[1][0] is board[1][2] and board[1][0] is not 0:
-            return board[1][0]
-        if board[2][0] is board[2][1] and board[2][0] is board[2][2] and board[2][0] is not 0:
-            return board[2][0]
-
-        # Vertical wins
-
-        if board[0][0] is board[1][0] and board[0][0] is board[2][0] and board[0][0] is not 0:
-            return board[0][0]
-        if board[0][1] is board[1][1] and board[0][1] is board[2][1] and board[0][1] is not 0:
-            return board[0][1]
-        if board[0][2] is board[1][2] and board[0][2] is board[2][2] and board[0][2] is not 0:
-            return board[0][2]
-
-        # Diagonal wins
-
-        if board[0][0] is board[1][1] and board[0][0] is board[2][2] and board[0][0] is not 0:
-            return board[0][0]
-        if board[0][2] is board[1][1] and board[0][2] is board[2][0] and board[0][2] is not 0:
-            return board[0][2]
-
-        # Check for tie
-
-        full = True
-        for i in range(len(board)):
-            for j in range(len(board[i])):
-                if board[i][j] is 0:
-                    full = False
-
-        if full is True:
-            return 0
-
-        return None
-
     # Prints the game board
     def printBoard(self):
 
@@ -107,6 +62,11 @@ class TicTacToe:
 
 # End TicTacToe
 
+# Checks for a win
+# If X has won, return 1
+# If O has won, return -1
+# If tie, return 0
+# If no one has won, return None
 def checkForWin(board):
 
     # Horizontal wins
